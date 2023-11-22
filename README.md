@@ -4,7 +4,7 @@
 
 **Note from [google](https://developers.google.com/identity/sign-in/web/server-side-flow): We are discontinuing the [Google Sign-In JavaScript Platform Library](https://developers.googleblog.com/2021/08/gsi-jsweb-deprecation.html) for web. For authentication and user sign-in, use the new Google Identity Services SDKs for both [Web](https://developers.google.com/identity/gsi/web) and Android instead.**
 
-Authentication flow for MERN stack application using google OAuth 2.0. 
+Authentication flow for MERN stack application using google OAuth 2.0.
 
 This oauth flow is more secure and you don't have to reload your react app and go through multiple redirections to authenticate client.
 
@@ -21,7 +21,7 @@ And the image blow is from [google docs](https://developers.google.com/identity/
 ### 1. Clone the repository & install dependencies
 
 ```bash
-git clone https://github.com/Shahzayb/mern-google-login.git
+git clone https://github.com/bigboss44144/mern-google-authorization.git
 
 cd mern-google-login
 
@@ -32,10 +32,9 @@ cd client & npm install
 
 ### 2. Obtain OAuth 2.0 credentials from the Google API Console.
 
-Visit the [Google API Console](https://console.developers.google.com/) to obtain OAuth 2.0 credentials such as a client ID and client secret that are known to both Google and your application. 
-Don't store your client secret in your React app. You only need client id in your react app to get the authorization grant code. 
-And you should store client secret in node app. 
-
+Visit the [Google API Console](https://console.developers.google.com/) to obtain OAuth 2.0 credentials such as a client ID and client secret that are known to both Google and your application.
+Don't store your client secret in your React app. You only need client id in your react app to get the authorization grant code.
+And you should store client secret in node app.
 
 ### 3. Add Authorized JavaScript Origins
 
@@ -43,8 +42,7 @@ Go to [Google API Console](https://console.developers.google.com/). And select y
 ![Capture](https://user-images.githubusercontent.com/29760858/65677289-c3582600-e06a-11e9-8a69-564a89dbe522.PNG)
 
 **This is a url of client side react app**
- 
- 
+
 **You'll notice in my code that I set the `redirect_uri` to `postmessage`, its because we need the authorization grant code without any redirection**
 
 ### 4. Client Side Setup
